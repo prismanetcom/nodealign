@@ -1,0 +1,317 @@
+{
+  "description": "Snapshot read-only del grafo visibile corrente; gruppi atomici",
+  "nodes": [
+    {
+      "name": "Background6",
+      "type": "Background",
+      "x": 0.0,
+      "y": -6.99,
+      "inputs": []
+    },
+    {
+      "name": "Background7",
+      "type": "Background",
+      "x": 8.5,
+      "y": 3.009,
+      "inputs": []
+    },
+    {
+      "name": "ColorCorrector1",
+      "type": "ColorCorrector",
+      "x": 7.0,
+      "y": 0.009,
+      "inputs": [
+        {
+          "source": "S08_Photo",
+          "id": "Input",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "Digital001",
+      "type": "MacroOperator",
+      "x": 0.0,
+      "y": 30.009,
+      "inputs": []
+    },
+    {
+      "name": "Digital001_1",
+      "type": "GroupOperator",
+      "x": 8.0,
+      "y": 0.009,
+      "inputs": []
+    },
+    {
+      "name": "GradientDark001",
+      "type": "MacroOperator",
+      "x": 6.0,
+      "y": -3.99,
+      "inputs": []
+    },
+    {
+      "name": "MediaOut1",
+      "type": "MediaOut",
+      "x": 15.0,
+      "y": 1.009,
+      "inputs": [
+        {
+          "source": "S08_Top",
+          "id": "Input",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "Merge6",
+      "type": "Merge",
+      "x": 8.0,
+      "y": -2.99,
+      "inputs": [
+        {
+          "source": "Merge7",
+          "id": "Background",
+          "type": "Image"
+        },
+        {
+          "source": "Digital001_1",
+          "id": "Foreground",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "Merge7",
+      "type": "Merge",
+      "x": 7.0,
+      "y": -2.99,
+      "inputs": [
+        {
+          "source": "Rectangle2",
+          "id": "EffectMask",
+          "type": "Mask"
+        },
+        {
+          "source": "S08_YachtM",
+          "id": "Background",
+          "type": "Image"
+        },
+        {
+          "source": "S08_PhotoXF",
+          "id": "Foreground",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "Rectangle2",
+      "type": "RectangleMask",
+      "x": 7.073,
+      "y": -4.945,
+      "inputs": []
+    },
+    {
+      "name": "S08_Logo",
+      "type": "Loader",
+      "x": 13.0,
+      "y": -4.99,
+      "inputs": []
+    },
+    {
+      "name": "S08_LogoM",
+      "type": "Merge",
+      "x": 10.5,
+      "y": -0.99,
+      "inputs": [
+        {
+          "source": "S08_P3M",
+          "id": "Background",
+          "type": "Image"
+        },
+        {
+          "source": "S08_LogoXF",
+          "id": "Foreground",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "S08_LogoXF",
+      "type": "Transform",
+      "x": 13.0,
+      "y": -3.99,
+      "inputs": [
+        {
+          "source": "S08_Logo",
+          "id": "Input",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "S08_P1",
+      "type": "TextPlus",
+      "x": 11.0,
+      "y": 3.009,
+      "inputs": []
+    },
+    {
+      "name": "S08_P1M",
+      "type": "Merge",
+      "x": 11.0,
+      "y": 1.009,
+      "inputs": [
+        {
+          "source": "Background7",
+          "id": "Background",
+          "type": "Image"
+        },
+        {
+          "source": "S08_P1",
+          "id": "Foreground",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "S08_P2",
+      "type": "TextPlus",
+      "x": 12.0,
+      "y": 3.009,
+      "inputs": []
+    },
+    {
+      "name": "S08_P2M",
+      "type": "Merge",
+      "x": 12.0,
+      "y": 1.009,
+      "inputs": [
+        {
+          "source": "S08_P1M",
+          "id": "Background",
+          "type": "Image"
+        },
+        {
+          "source": "S08_P2",
+          "id": "Foreground",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "S08_P3",
+      "type": "TextPlus",
+      "x": 13.0,
+      "y": 3.009,
+      "inputs": []
+    },
+    {
+      "name": "S08_P3M",
+      "type": "Merge",
+      "x": 13.0,
+      "y": 1.009,
+      "inputs": [
+        {
+          "source": "S08_P2M",
+          "id": "Background",
+          "type": "Image"
+        },
+        {
+          "source": "S08_P3",
+          "id": "Foreground",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "S08_Photo",
+      "type": "Loader",
+      "x": 7.0,
+      "y": 1.009,
+      "inputs": []
+    },
+    {
+      "name": "S08_PhotoXF",
+      "type": "Transform",
+      "x": 7.0,
+      "y": -0.99,
+      "inputs": [
+        {
+          "source": "ColorCorrector1",
+          "id": "Input",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "S08_Title",
+      "type": "TextPlus",
+      "x": 9.0,
+      "y": 1.009,
+      "inputs": []
+    },
+    {
+      "name": "S08_Top",
+      "type": "Merge",
+      "x": 10.5,
+      "y": -2.99,
+      "inputs": [
+        {
+          "source": "Merge6",
+          "id": "Background",
+          "type": "Image"
+        },
+        {
+          "source": "S08_LogoM",
+          "id": "Foreground",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "S08_Yacht",
+      "type": "Loader",
+      "x": 4.0,
+      "y": -2.99,
+      "inputs": []
+    },
+    {
+      "name": "S08_YachtM",
+      "type": "Merge",
+      "x": 6.0,
+      "y": -2.99,
+      "inputs": [
+        {
+          "source": "GradientDark001",
+          "id": "Background",
+          "type": "Image"
+        },
+        {
+          "source": "S08_YachtXF",
+          "id": "Foreground",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "S08_YachtM_1",
+      "type": "Merge",
+      "x": 0.0,
+      "y": -5.99,
+      "inputs": []
+    },
+    {
+      "name": "S08_YachtXF",
+      "type": "Transform",
+      "x": 5.0,
+      "y": -2.99,
+      "inputs": [
+        {
+          "source": "S08_Yacht",
+          "id": "Input",
+          "type": "Image"
+        }
+      ]
+    }
+  ]
+}
