@@ -1,4 +1,4 @@
-# NodeAlign
+# NodeAlign for Blackmagic Fusion
 
 **Auto-layout for Fusion node flows** — a Lua script for DaVinci Resolve (Fusion page) and Fusion Studio that tidies up messy node graphs with a single click, without destroying your logic.
 
